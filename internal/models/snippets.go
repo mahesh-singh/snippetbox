@@ -2,6 +2,7 @@ package models
 
 import (
 	"database/sql"
+	"errors"
 	"time"
 )
 
@@ -17,7 +18,7 @@ type SnippetModel struct {
 	DB *sql.DB
 }
 
-func (m *SnippetModel) Inset(title string, content string, expires int) (int, error) {
+func (m *SnippetModel) Insert(title string, content string, expires int) (int, error) {
 
 	var id int
 	stmt := `INSERT INTO snippets (title, content, created, expires)
@@ -33,9 +34,54 @@ func (m *SnippetModel) Inset(title string, content string, expires int) (int, er
 }
 
 func (m *SnippetModel) Get(id int) (Snippet, error) {
-	return Snippet{}, nil
+
+	var s Snippet
+
+	stmt := `SELECT id, title, content, created, expires 
+    FROM snippets 
+    WHERE expires > CURRENT_TIMESTAMP AT TIME ZONE 'UTC' AND id = $1`
+
+	err := m.DB.QueryRow(stmt, id).Scan(&s.ID, &s.Title, &s.Content, &s.Created, &s.Expires)
+
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return Snippet{}, ErrNoRecord
+		} else {
+			return Snippet{}, err
+		}
+	}
+	return s, nil
 }
 
 func (m *SnippetModel) Latest() ([]Snippet, error) {
-	return nil, nil
+	const stmt = `
+    SELECT id, title, content, created, expires 
+    FROM snippets 
+    WHERE expires > CURRENT_TIMESTAMP AT TIME ZONE 'UTC' 
+    ORDER BY id DESC 
+    LIMIT 10`
+
+	rows, err := m.DB.Query(stmt)
+
+	if err != nil {
+		return nil, err
+	}
+	var snippets []Snippet
+
+	for rows.Next() {
+		var s Snippet
+		err = rows.Scan(&s.ID, &s.Title, &s.Content, &s.Created, &s.Expires)
+
+		if err != nil {
+			return nil, err
+		}
+		snippets = append(snippets, s)
+	}
+
+	if err = rows.Err(); err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+	return snippets, nil
 }

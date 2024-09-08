@@ -64,6 +64,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO web;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO web;
 
+-- Grant PRIVILEGES on SEQUENCES
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public to web;
 
 ```
 
@@ -76,4 +78,5 @@ Date: 05/Sep/2024 - Committed Chapter #1 & 2
 Date: 06/Sep/2024 - Finished till page 83 of Chapter#3 (section logging)
 Date: 07/Sep/2024 - Finished Chapter 3 (till page 95)
 Date: 07/Sep/2024 - Finished till page 116 of Chapter #4
-Next: Insert is giving error
+Date: 08/Sep/2024 - Finished till page 132 of Chapter #4
+Next: Managing null values   - page 133
