@@ -77,6 +77,10 @@ GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public to web;
 Date: 05/Sep/2024 - Committed Chapter #1 & 2
 Date: 06/Sep/2024 - Finished till page 83 of Chapter#3 (section logging)
 Date: 07/Sep/2024 - Finished Chapter 3 (till page 95)
-Date: 07/Sep/2024 - Finished till page 116 of Chapter #4
-Date: 08/Sep/2024 - Finished till page 132 of Chapter #4
-Next: Managing null values   - page 133
+Date: 07/Sep/2024 - Finished till page 116 of Chapter #4 (database)
+Date: 08/Sep/2024 - Finished till page 132 of Chapter #4 (database)
+Data: 09/Sep/2024 - Finished till page 143 of Chapter #5 (template)
+Data: 09/Sep/2024 - Finished till page 152 of Chapter #5 (templates)
+Data: 10/Sep/2024 - Finished till page 156 of Chapter #5 (templates)
+Data: 11/Sep/2024 - Finished till page 164 of Chapter #5 (templates)
+Next: Additional information from page 165 of Chapter #5
