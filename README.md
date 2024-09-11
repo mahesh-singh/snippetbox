@@ -83,4 +83,5 @@ Data: 09/Sep/2024 - Finished till page 143 of Chapter #5 (template)
 Data: 09/Sep/2024 - Finished till page 152 of Chapter #5 (templates)
 Data: 10/Sep/2024 - Finished till page 156 of Chapter #5 (templates)
 Data: 11/Sep/2024 - Finished till page 164 of Chapter #5 (templates)
+Data: 11/Sep/2024 - Finished Chapter #5 (templates) page 174
 Next: Additional information from page 165 of Chapter #5
