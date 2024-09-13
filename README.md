@@ -84,4 +84,7 @@ Data: 09/Sep/2024 - Finished till page 152 of Chapter #5 (templates)
 Data: 10/Sep/2024 - Finished till page 156 of Chapter #5 (templates)
 Data: 11/Sep/2024 - Finished till page 164 of Chapter #5 (templates)
 Data: 11/Sep/2024 - Finished Chapter #5 (templates) page 174
-Next: Additional information from page 165 of Chapter #5
+Date: 11/Sep/2024 - Finished Chapter #6 (middleware) 
+Data: 12/Sep/2024 - Finished till page 208 of Chapter #7 (Displaying Processing form) 
+Date: 13/Sep/2024 - Finished Chapter #7 (Processing Forms) 
+Next: Chapter 8 - Session Manager  - 231 
