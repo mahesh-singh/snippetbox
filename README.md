@@ -87,4 +87,6 @@ Data: 11/Sep/2024 - Finished Chapter #5 (templates) page 174
 Date: 11/Sep/2024 - Finished Chapter #6 (middleware) 
 Data: 12/Sep/2024 - Finished till page 208 of Chapter #7 (Displaying Processing form) 
 Date: 13/Sep/2024 - Finished Chapter #7 (Processing Forms) 
-Next: Chapter 8 - Session Manager  - 231 
+Date: 14/Sep/2024 - Finished till page 252 (Server and security improvement)
+Date: 15/Sep/2024 - Finished Chapter 9, til page 271 (Server and security improvement)
+Next: Chapter 10 - Chapter 10  - User Authentication  - page no. 272
