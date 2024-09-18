@@ -1,6 +1,7 @@
 package validator
 
 import (
+	"regexp"
 	"slices"
 	"strings"
 	"unicode/utf8"
@@ -38,6 +39,14 @@ func MaxChar(value string, n int) bool {
 	return utf8.RuneCountInString(value) <= n
 }
 
+func MinChar(value string, n int) bool {
+	return utf8.RuneCountInString(value) >= n
+}
+
 func PermittedValues[T comparable](value T, permittedValue ...T) bool {
 	return slices.Contains(permittedValue, value)
+}
+
+func Matches(value string, rx *regexp.Regexp) bool {
+	return rx.MatchString(value)
 }

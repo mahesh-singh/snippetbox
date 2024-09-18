@@ -67,7 +67,32 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO web;
 -- Grant PRIVILEGES on SEQUENCES
 GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public to web;
 
+
+----- Create User table 
+
+-- Create the database (if it doesn't exist)
+-- Note: In PostgreSQL, you typically create a database from the command line or pgAdmin
+-- CREATE DATABASE snippetbox;
+
+-- Connect to the database
+-- \c snippetbox
+
+-- Create the users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    hashed_password CHAR(60) NOT NULL,
+    created TIMESTAMP NOT NULL
+);
+
+-- Add a unique constraint on the email column
+ALTER TABLE users ADD CONSTRAINT users_uc_email UNIQUE (email)
+
+
+
 ```
+
 
 
 
@@ -89,4 +114,5 @@ Data: 12/Sep/2024 - Finished till page 208 of Chapter #7 (Displaying Processing 
 Date: 13/Sep/2024 - Finished Chapter #7 (Processing Forms) 
 Date: 14/Sep/2024 - Finished till page 252 (Server and security improvement)
 Date: 15/Sep/2024 - Finished Chapter 9, til page 271 (Server and security improvement)
-Next: Chapter 10 - Chapter 10  - User Authentication  - page no. 272
+Date: 16/Sep/2024 - Finished til page 276 (User Authentication)
+Next: Chapter 10 - Chapter 10  - User Authentication: Creating user model  - page no. 277
