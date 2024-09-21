@@ -30,4 +30,6 @@ Date: 15/Sep/2024 - Finished Chapter 9, til page 271 (Server and security improv
 Date: 16/Sep/2024 - Finished til page 276 (User Authentication)
 Date: 17/Sep/2024 - Finished til page 284 (User Authentication)
 Date: 21/Sep/2024 - Finished Chapter 10 -  User Authentication
-Next: Chapter 11 - Chapter 11  - User request context - page no 325
+Date: 21/Sep/2024 - Finished reading Chapter 11 -  Request context
+Date: 21/Sep/2024 - Finished Chapter 12 -  Embedding
+Next: Chapter 13 - Chapter 13  - Testing - page 344
