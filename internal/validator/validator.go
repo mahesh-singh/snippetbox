@@ -7,12 +7,15 @@ import (
 	"unicode/utf8"
 )
 
+var EmailRX = regexp.MustCompile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")
+
 type Validator struct {
-	FieldErrors map[string]string
+	NonFieldErrors []string
+	FieldErrors    map[string]string
 }
 
 func (v *Validator) Valid() bool {
-	return len(v.FieldErrors) == 0
+	return len(v.FieldErrors) == 0 && len(v.NonFieldErrors) == 0
 }
 
 func (v *Validator) AddFieldError(key, message string) {
@@ -23,6 +26,10 @@ func (v *Validator) AddFieldError(key, message string) {
 	if _, exist := v.FieldErrors[key]; !exist {
 		v.FieldErrors[key] = message
 	}
+}
+
+func (v *Validator) AddNonFieldError(message string) {
+	v.NonFieldErrors = append(v.NonFieldErrors, message)
 }
 
 func (v *Validator) CheckField(ok bool, key, message string) {
