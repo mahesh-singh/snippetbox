@@ -32,4 +32,6 @@ Date: 17/Sep/2024 - Finished til page 284 (User Authentication)
 Date: 21/Sep/2024 - Finished Chapter 10 -  User Authentication
 Date: 21/Sep/2024 - Finished reading Chapter 11 -  Request context
 Date: 21/Sep/2024 - Finished Chapter 12 -  Embedding
-Next: Chapter 13 - Chapter 13  - Testing - page 344
+Date: 22/Sep/2024 - Finished till page 354 Chapter 13  - Testing
+Date: 22/Sep/2024 - Finished till page 363 Chapter 13  - Testing
+Next: Chapter 13 -  Testing cookies and redirection page 364 Chapter 13  - Testing 
