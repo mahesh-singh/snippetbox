@@ -37,4 +37,5 @@ Date: 22/Sep/2024 - Finished till page 363 Chapter 13  - Testing
 Date: 22/Sep/2024 - `No progress`
 Date: 22/Sep/2024 - `No progress`
 Date: 25/Sep/2024 - Finished till page 380 in Chapter 13  - Testing
-## Next: Chapter 13 -  Testing Testing HTML page 381 in Chapter 13  - Testing
+Date: 29/Sep/2024 - Finished Chapter 13  - Testing
+## Next: Chapter 16 -  Guided exercise  - page 405

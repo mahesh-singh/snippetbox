@@ -16,6 +16,8 @@ func (app *application) routes() http.Handler {
 	//TODO: why /{$}
 	mux.HandleFunc("GET /{$}", app.home)
 
+	mux.HandleFunc("GET /about", app.about)
+
 	//TODO: in /snippet/view/{id} - valid and invalid wildcard
 	mux.HandleFunc("GET /snippet/view/{id}", app.snippetView)
 	mux.HandleFunc("GET /snippet/create", app.snippetCreate)
@@ -25,6 +27,8 @@ func (app *application) routes() http.Handler {
 	mux.HandleFunc("POST /user/signup", app.userSignUpPost)
 	mux.HandleFunc("GET /user/login", app.userLogin)
 	mux.HandleFunc("POST /user/login", app.userLoginPost)
+	mux.HandleFunc("GET /account/password/update", app.accountPasswordUpdate)
+	mux.HandleFunc("POST /account/password/update", app.accountPasswordUpdatePost)
 	mux.HandleFunc("POST /user/logout", app.userLogoutPost)
 
 	return app.recoverPanic(app.logRequest(commonHeader(mux)))

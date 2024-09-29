@@ -20,6 +20,7 @@ type application struct {
 	snippets      models.SnippetModelInterface
 	users         models.UserModelInterface
 	templateCache map[string]*template.Template
+	debug         bool
 }
 
 func main() {
@@ -28,6 +29,9 @@ func main() {
 	addr := flag.String("addr", ":4000", "HTTP Network address")
 
 	dsn := flag.String("dsn", "host=localhost user=web password=pass dbname=snippetbox sslmode=disable", "Postgres data source name ")
+
+	debug := flag.Bool("debug", false, "debug mode")
+
 	//parse the flag. Need to call before flags get used
 	flag.Parse()
 
@@ -52,7 +56,9 @@ func main() {
 		logger:        logger,
 		snippets:      &models.SnippetModel{DB: db},
 		users:         &models.UserModel{DB: db},
-		templateCache: templateCache}
+		templateCache: templateCache,
+		debug:         *debug,
+	}
 
 	tlsConfig := &tls.Config{
 		CurvePreferences: []tls.CurveID{tls.X25519, tls.CurveP256},
