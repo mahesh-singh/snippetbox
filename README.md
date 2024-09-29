@@ -11,7 +11,7 @@ https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-yea
 
 
 # Daily logs
-
+Date: 01/Sep/2024 - Started 
 Date: 05/Sep/2024 - Committed Chapter #1 & 2
 Date: 06/Sep/2024 - Finished till page 83 of Chapter#3 (section logging)
 Date: 07/Sep/2024 - Finished Chapter 3 (till page 95)
@@ -34,4 +34,7 @@ Date: 21/Sep/2024 - Finished reading Chapter 11 -  Request context
 Date: 21/Sep/2024 - Finished Chapter 12 -  Embedding
 Date: 22/Sep/2024 - Finished till page 354 Chapter 13  - Testing
 Date: 22/Sep/2024 - Finished till page 363 Chapter 13  - Testing
-Next: Chapter 13 -  Testing cookies and redirection page 364 Chapter 13  - Testing 
+Date: 22/Sep/2024 - `No progress`
+Date: 22/Sep/2024 - `No progress`
+Date: 25/Sep/2024 - Finished till page 380 in Chapter 13  - Testing
+## Next: Chapter 13 -  Testing Testing HTML page 381 in Chapter 13  - Testing

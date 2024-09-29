@@ -18,6 +18,12 @@ type User struct {
 	Created        time.Time
 }
 
+type UserModelInterface interface {
+	Insert(name, email, password string) error
+	Authenticate(email, password string) (int, error)
+	Exists(id int) (bool, error)
+}
+
 type UserModel struct {
 	DB *sql.DB
 }
@@ -78,5 +84,20 @@ func (m *UserModel) Authenticate(email, password string) (int, error) {
 }
 
 func (m *UserModel) Exists(id int) (bool, error) {
-	return false, nil
+
+	var email string
+
+	stmt := "SELECT email FROM users WHERE ID = $1"
+
+	err := m.DB.QueryRow(stmt, id).Scan(&email)
+
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return false, nil
+		} else {
+			return false, err
+		}
+	}
+
+	return true, nil
 }

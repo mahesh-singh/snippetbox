@@ -84,3 +84,5 @@ GRANT INSERT ON users TO web;
 
 -- If you also need to select from the users table:
 GRANT SELECT ON users TO web;
+
+

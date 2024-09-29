@@ -1,0 +1,20 @@
+CREATE DATABASE test_snippetbox WITH ENCODING 'UTF8' LC_COLLATE 'en_US.UTF-8' LC_CTYPE 'en_US.UTF-8' TEMPLATE template0;
+
+CREATE USER test_web WITH PASSWORD 'pass';
+
+
+GRANT CONNECT ON DATABASE test_snippetbox TO test_web;
+
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO test_web;
+
+
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO test_web;
+
+
+-- Grant create permission in the public schema
+GRANT CREATE ON SCHEMA public TO test_web;
+
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public to test_web;
